@@ -67,6 +67,12 @@ The experimental Simulink structure implements a Proportional-Derivative (PD) co
 * **Transfer Function ($G(s)$):** In the Laplace domain, the input-output relationship maps motor voltage $V_m$ to angular position $\theta$ using a second-order motor gain transfer function:
   $$G(s) = \frac{\theta(s)}{V_m(s)} = \frac{K}{s(\tau s + 1)}$$
 
+### Practical Hands-On Testing & Observations
+During the practical laboratory session, several hands-on experiments were executed to test system responses against theory:
+* **Proportional Gain Testing ($K_p$ sweeps):** Gradually increased $K_p$ to analyze the trade-off between system responsiveness and structural instability/overshoot
+* **Derivative Action & Damping:** Disabling the derivative gain ($K_d = 0$) caused severe system ringing and continuous oscillations, demonstrating its crucial role as an electronic shock absorber
+* **Actuator Saturation Limits:** Imposed strict voltage constraints to evaluate performance degradation during saturation, verifying how amplifier limits restrict command authority.
+* **Auxiliary hardware assessment:** Reviewed secondary hardware properties such as built-in tachometers and stall detection frameworks to safeguard components.
 ---
 
 ## 7. Variable Classifications & System Configurations
